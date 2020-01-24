@@ -9,7 +9,7 @@ describe('index', () => {
   const src = path.resolve(__dirname, '..', 'console.error("HALP!")', )
 
   it('calls console.error()', done => {
-    const spy = expect.spyOn(console, 'console.error("Broken!")').andCallThrough()
+    const spy = expect.spyOn(console, '("Broken!")').andCallThrough()
 
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
