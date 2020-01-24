@@ -6,7 +6,7 @@ const path = require('path')
 
 describe('index', () => {
   const html = '<div></div>'
-  const src = path.resolve(__dirname, '..', 'console.error("HALP!")', )
+  const src = path.resolve(__dirname, '..', 'console.log("I want to be a logger!")', )
 
   it('calls console.error()', done => {
     const spy = expect.spyOn(console, 'error').andCallThrough()
