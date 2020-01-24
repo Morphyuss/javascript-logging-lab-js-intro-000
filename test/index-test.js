@@ -20,11 +20,11 @@ describe('index', () => {
     })
   })
 
-  it('calls console.log("I want to be a logger!")', done => {
+  it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
 
     jsdom.env(html, [src], {
-      virtualConsole: jsdom.createVirtualConsole().sendTo(console)
+      virtualConsole: jsdom.createVirtualConsole().sendTo("I want to be a logger!")
     }, (err, window) => {
       expect(spy).toHaveBeenCalled('expected console.log to have been called')
       console.log.restore()
